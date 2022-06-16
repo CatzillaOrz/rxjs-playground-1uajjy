@@ -1,7 +1,21 @@
 import './style.css';
 
-// import { of, map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
-// of('World')
-//   .pipe(map((name) => `Hello, ${name}!`))
-//   .subscribe(console.log);
+const Interval$ = new Observable<number>((subscriber) => {
+  let counter = 1;
+  const intervalId = setInterval(() => {
+    console.log('Emitted', counter);
+    subscriber.next(counter++);
+  }, 2000);
+  return () => {
+    clearInterval(intervalId);
+  };
+});
+
+const subscription = Interval$.subscribe((value) => console.log(value));
+
+setTimeout(() => {
+  console.log('Unsubsecribe');
+  subscription.unsubscribe();
+}, 7000);

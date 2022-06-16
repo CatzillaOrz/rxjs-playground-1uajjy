@@ -18,4 +18,4 @@ const subscription = Interval$.subscribe((value) => console.log(value));
 setTimeout(() => {
   console.log('Unsubsecribe');
   subscription.unsubscribe();
-}, 7000);
+}, 8000);

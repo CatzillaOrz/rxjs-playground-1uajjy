@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 
 export class TestRxjsUnsubscribe {
   constructor() {}
+
   test() {
     const Interval$ = new Observable<number>((subscriber) => {
       let counter = 1;

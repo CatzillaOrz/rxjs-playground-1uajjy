@@ -22,4 +22,9 @@ export class TestRxjsUnsubscribe {
       subscription.unsubscribe();
     }, 8000);
   }
+
+  run() {
+    const unsub$ = new TestRxjsUnsubscribe();
+    unsub$.unSub();
+  }
 }

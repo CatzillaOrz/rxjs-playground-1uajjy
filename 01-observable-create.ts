@@ -7,6 +7,11 @@ export class CreateObserable {
       subscriber.next('Alice');
       setTimeout(() => subscriber.next('Ben'), 2000);
       setTimeout(() => subscriber.next('Charlie'), 4000);
+      return () => {
+        // Teardonw
+        console.log('Self Teardonw');
+        subscriber.unsubscribe();
+      };
     });
   }
 

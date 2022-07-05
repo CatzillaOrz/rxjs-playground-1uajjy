@@ -2,21 +2,22 @@ import { Observable } from 'rxjs';
 
 export class CreateObserable {
   create() {
-    const observable$ = new Observable<string>((subscriber) => {
+    return new Observable<string>((subscriber) => {
       console.log('Observable executed');
       subscriber.next('Alice');
       subscriber.next('Ben');
       subscriber.next('Charlie');
     });
-
-    const observer = {
-      next: (value) => console.log(value),
-    };
-
-    observable$.subscribe(observer);
   }
 
   run() {
-    this.create();
+    // new Observable =>  def Subseriber
+    const observable$ = this.create();
+    // new Observor
+    const observer = {
+      next: (value) => console.log(value),
+    };
+    //run Subscribe
+    observable$.subscribe(observer);
   }
 }

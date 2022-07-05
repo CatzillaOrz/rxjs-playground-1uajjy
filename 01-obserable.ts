@@ -5,8 +5,8 @@ export class CreateObserable {
     return new Observable<string>((subscriber) => {
       console.log('Observable executed');
       subscriber.next('Alice');
-      subscriber.next('Ben');
-      subscriber.next('Charlie');
+      setTimeout(() => subscriber.next('Ben'), 2000);
+      setTimeout(() => subscriber.next('Charlie'), 4000);
     });
   }
 
@@ -21,9 +21,19 @@ export class CreateObserable {
     observable$.subscribe(observer);
   }
 
-  run() {
+  runVersion02() {
     //Simplify run subscribe
     const observable$ = this.create();
     observable$.subscribe((value) => console.log(value));
+  }
+
+  run() {
+    // try run unsubscribe by using Create subscription * & run
+    const observable$ = this.create();
+    const subscription = observable$.subscribe((value) => console.log(value));
+    setTimeout(() => {
+      console.log('Unsubscription');
+      subscription.unsubscribe();
+    }, 3000);
   }
 }

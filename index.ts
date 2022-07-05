@@ -8,4 +8,6 @@ import { ObservableMulti } from './02-observable-multi';
 
 // runMyFun(CreateObserable);
 
-runMyFun(ObservableMulti);
+// runMyFun(ObservableMulti);
+
+runMyFun();

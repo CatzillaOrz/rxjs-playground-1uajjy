@@ -32,7 +32,7 @@ export class ObservableMulti {
     setTimeout(() => {
       console.log('Subscription2 starts');
       const subscription02 = observable$.subscribe(
-        // <= this is deprecated
+        //FIXME: // <= this is deprecated
         (value) => console.log('Subscription02', value),
         (err) => {},
         () => {

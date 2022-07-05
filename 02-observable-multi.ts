@@ -18,17 +18,21 @@ export class ObservableMulti {
     // subscriber 1
     console.log('Subscription1 starts');
     const subscription01 = observable$.subscribe(
-      (value) => console.log('Subscription01', value),
-      (err) => {},
-      () => {
-        console.log('Subscription01 Complete');
-        unsubscibe([subscription01]);
+      // also recommended ways of subscibe like
+      {
+        next: (value) => console.log('Subscription01', value),
+        error: (err) => {},
+        complete: () => {
+          console.log('Subscription01 Complete');
+          unsubscibe([subscription01]);
+        },
       }
     );
     // subscriber 2
     setTimeout(() => {
       console.log('Subscription2 starts');
       const subscription02 = observable$.subscribe(
+        // <= this is deprecated
         (value) => console.log('Subscription02', value),
         (err) => {},
         () => {

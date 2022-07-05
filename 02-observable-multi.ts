@@ -10,6 +10,11 @@ export class ObservableMulti {
       setTimeout(() => subscriber.next('Ben'), 2000);
       setTimeout(() => subscriber.next('Charlie'), 4000);
       setTimeout(() => subscriber.complete(), 4500);
+      return () => {
+        // Teardonw
+        console.log('Self Teardonw');
+        subscriber.unsubscribe();
+      };
     });
   }
   run() {

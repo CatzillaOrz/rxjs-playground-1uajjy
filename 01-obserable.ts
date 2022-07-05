@@ -13,7 +13,7 @@ export class CreateObserable {
   run() {
     // new Observable =>  def Subseriber
     const observable$ = this.create();
-    // new Observor
+    // new Observor Object
     const observer = {
       next: (value) => console.log(value),
     };

@@ -10,7 +10,7 @@ export class CreateObserable {
     });
   }
 
-  run() {
+  runVersion01() {
     // new Observable =>  def Subseriber
     const observable$ = this.create();
     // new Observor Object
@@ -19,5 +19,11 @@ export class CreateObserable {
     };
     //run Subscribe
     observable$.subscribe(observer);
+  }
+
+  run() {
+    //Simplify run subscribe
+    const observable$ = this.create();
+    observable$.subscribe((value) => console.log(value));
   }
 }

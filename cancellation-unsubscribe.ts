@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 export class TestRxjsUnsubscribe {
   constructor() {}
 
-  test() {
+  unSub() {
     const Interval$ = new Observable<number>((subscriber) => {
       let counter = 1;
       const intervalId = setInterval(() => {

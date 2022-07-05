@@ -1,5 +1,6 @@
 import './style.css';
 import { TestRxjsUnsubscribe } from './cancellation-unsubscribe';
+import { Observable } from 'rxjs';
 
-const test1 = new TestRxjsUnsubscribe();
-test1.test();
+const unsub$ = new TestRxjsUnsubscribe();
+unsub$.unSub();

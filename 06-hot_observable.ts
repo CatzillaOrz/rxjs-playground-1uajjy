@@ -8,10 +8,13 @@ export class HotObservable {
         subscribe.next(event);
       });
       setTimeout(() => {
-        subscribe.error(new Error('Self Error'));
-      }, 3000);
+        subscribe.error(new ErrorEvent('Self Error'));
+      }, 1000);
+      setTimeout(() => {
+        subscribe.complete();
+      }, 2000);
       return () => {
-        console.log('Teardown When Error');
+        console.log('Teardown When Error Or Complete!');
         subscribe.unsubscribe();
       };
     });
@@ -23,7 +26,7 @@ export class HotObservable {
         console.log(err);
       },
       complete: () => {
-        console.log(new Date('yyyy-dd-mm'));
+        console.log(new Date());
       },
     });
   }

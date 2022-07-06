@@ -6,6 +6,7 @@ import { RxjsUnsubscribe } from './04-cancellation_unsubscribe';
 import { ColdObservableHttp } from './05-cold_observable_http';
 import { HotObservable } from './06-hot_observable';
 import { CreationFunction } from './07-creation_function_of';
+import { CreateFuntionFrom } from './08-creation_fun_from';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -17,4 +18,4 @@ import { CreationFunction } from './07-creation_function_of';
 
 // runMyFun(HotObservable);
 
-runMyFun(CreationFunction);
+runMyFun(CreateFuntionFrom);

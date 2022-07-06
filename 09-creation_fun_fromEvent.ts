@@ -10,8 +10,8 @@ import { fromEvent } from 'rxjs';
 export class CreationFuntionFromEvent {
   private triggerButton = document.querySelector('button#hello');
   create() {
-    fromEvent(this.triggerButton, 'click').subscribe((event) => {
-      console.log('event:', event);
+    fromEvent<MouseEvent>(this.triggerButton, 'click').subscribe((event) => {
+      console.log('event:', event.type, event.x, event.y);
     });
   }
   run() {

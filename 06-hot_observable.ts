@@ -10,10 +10,10 @@ export class HotObservable {
       });
       setTimeout(() => {
         subscribe.error(new ErrorEvent('Self Error'));
-      }, 1000);
+      }, 3000);
       setTimeout(() => {
         subscribe.complete();
-      }, 2000);
+      }, 4000);
       return () => {
         console.log('Teardown When Error Or Complete!');
         subscribe.unsubscribe();
@@ -31,6 +31,19 @@ export class HotObservable {
         console.log(new Date());
       },
     });
+
+    setTimeout(() => {
+      console.log('[Hot observable Executed after 5000 ms...]');
+      const btnSubscription02$ = helloClickObservor$.subscribe({
+        next: (event) => {
+          console.log(event);
+        },
+        error: (err) => {
+          console.log(err);
+          unsubscibe([btnSubscription02$]);
+        },
+      });
+    }, 5000);
   }
 
   run() {

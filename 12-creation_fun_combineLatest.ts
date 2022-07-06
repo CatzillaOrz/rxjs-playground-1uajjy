@@ -1,3 +1,10 @@
+/*
+ ** {combineLatest}
+ ** combineLatest([A,B])
+ **
+ **
+ */
+
 export class CreationFunctionCombineLatest {
   create() {}
 

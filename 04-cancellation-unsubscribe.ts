@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-export class TestRxjsUnsubscribe {
+export class RxjsUnsubscribe {
   constructor() {}
 
   unSub() {
@@ -24,7 +24,7 @@ export class TestRxjsUnsubscribe {
   }
 
   run() {
-    const unsub$ = new TestRxjsUnsubscribe();
+    const unsub$ = new RxjsUnsubscribe();
     unsub$.unSub();
   }
 }

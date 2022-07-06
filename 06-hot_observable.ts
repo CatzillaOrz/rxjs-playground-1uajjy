@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs';
+import { unsubscibe } from './0-unSub';
 
 export class HotObservable {
   create() {
@@ -24,6 +25,7 @@ export class HotObservable {
       },
       error: (err) => {
         console.log(err);
+        unsubscibe([btnSubscription$]);
       },
       complete: () => {
         console.log(new Date());

@@ -1,6 +1,14 @@
 import { Observable } from 'rxjs';
 import { unsubscibe } from './0-unSub';
 
+/*
+ ** Hot Observable
+ ** @param DOM Event
+ ** @param State(ngrx,Redux...)
+ ** @param Subjects
+ **
+ */
+
 export class HotObservable {
   create() {
     const helloButton = document.querySelector('button#hello');

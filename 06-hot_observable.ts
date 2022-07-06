@@ -1,7 +1,34 @@
+import { Observable } from 'rxjs';
+
 export class HotObservable {
-  create() {}
+  create() {
+    const helloButton = document.querySelector('button#hello');
+    const helloClickObservor$ = new Observable((subscribe) => {
+      helloButton.addEventListener('click', (event) => {
+        subscribe.next(event);
+      });
+      setTimeout(() => {
+        subscribe.error(new Error('Self Error'));
+      }, 3000);
+      return () => {
+        console.log('Teardown When Error');
+        subscribe.unsubscribe();
+      };
+    });
+    const btnSubscription$ = helloClickObservor$.subscribe(
+      (event) => {
+        console.log(event);
+      },
+      (err) => {
+        console.log(err);
+      },
+      () => {
+        console.log(new Date('yyyy-dd-mm'));
+      }
+    );
+  }
 
   run() {
-    // this.create();
+    this.create();
   }
 }

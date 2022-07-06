@@ -15,7 +15,9 @@ export class CreationFunction {
     of('Alice', 'Ben', 'Charlie').subscribe({
       next: (value) => console.log(value),
       complete: () => console.log('[Completeed...]'),
-      error: (e) => console.log(e),
+      error: (err) => {
+        console.log('err:', err);
+      },
     });
   }
   run() {

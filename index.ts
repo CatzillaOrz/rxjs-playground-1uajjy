@@ -8,6 +8,7 @@ import { HotObservable } from './06-hot_observable';
 import { CreationFunction } from './07-creation_function_of';
 import { CreateFuntionFrom } from './08-creation_fun_from';
 import { CreationFuntionFromEvent } from './09-creation_fun_fromEvent';
+import { CreateionFuntionTimer } from './10-creation_fun_timer';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -21,4 +22,6 @@ import { CreationFuntionFromEvent } from './09-creation_fun_fromEvent';
 
 // runMyFun(CreateFuntionFrom);
 
-runMyFun(CreationFuntionFromEvent);
+// runMyFun(CreationFuntionFromEvent);
+
+runMyFun(CreateionFuntionTimer);

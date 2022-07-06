@@ -49,3 +49,7 @@ pre {
   padding: 10px;
   color: var(--code-base);
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

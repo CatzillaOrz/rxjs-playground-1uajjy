@@ -5,7 +5,7 @@ import { ObservableMulti } from './02-observable_multi';
 import { RxjsUnsubscribe } from './04-cancellation_unsubscribe';
 import { ColdObservableHttp } from './05-cold_observable_http';
 import { HotObservable } from './06-hot_observable';
-import { CreationFunction } from './07-creation_function';
+import { CreationFunction } from './07-creation_function_of';
 
 // runMyFun(RxjsUnsubscribe);
 

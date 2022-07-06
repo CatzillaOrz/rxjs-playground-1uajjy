@@ -10,6 +10,7 @@ import { CreateFuntionFrom } from './08-creation_fun_from';
 import { CreationFuntionFromEvent } from './09-creation_fun_fromEvent';
 import { CreateionFuntionTimer } from './10-creation_fun_timer';
 import { CreationFunctionForkJoin } from './11-creation_fun_forkJoin';
+import { CreationFunctionCombineLatest } from './12-creation_fun_combineLatest';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -27,4 +28,6 @@ import { CreationFunctionForkJoin } from './11-creation_fun_forkJoin';
 
 // runMyFun(CreateionFuntionTimer);
 
-runMyFun(CreationFunctionForkJoin);
+// runMyFun(CreationFunctionForkJoin);
+
+runMyFun(CreationFunctionCombineLatest);

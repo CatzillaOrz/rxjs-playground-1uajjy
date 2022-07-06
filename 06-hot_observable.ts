@@ -15,17 +15,17 @@ export class HotObservable {
         subscribe.unsubscribe();
       };
     });
-    const btnSubscription$ = helloClickObservor$.subscribe(
-      (event) => {
+    const btnSubscription$ = helloClickObservor$.subscribe({
+      next: (event) => {
         console.log(event);
       },
-      (err) => {
+      error: (err) => {
         console.log(err);
       },
-      () => {
+      complete: () => {
         console.log(new Date('yyyy-dd-mm'));
-      }
-    );
+      },
+    });
   }
 
   run() {

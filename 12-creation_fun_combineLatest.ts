@@ -6,7 +6,13 @@
  */
 
 export class CreationFunctionCombineLatest {
-  create() {}
+  create() {
+    let conversionDropdown = document.getElementById('conversion-dropdown');
+    conversionDropdown.addEventListener('input', (event) => {
+      // do something...
+      console.log('event:', event.target.value);
+    });
+  }
 
   run() {
     this.create();

@@ -12,6 +12,7 @@ import { CreateionFuntionTimer } from './10-creation_fun_timer';
 import { CreationFunctionForkJoin } from './11-creation_fun_forkJoin';
 import { CreationFunctionCombineLatest } from './12-creation_fun_combineLatest';
 import { OperatorFilter } from './13-operator-filter';
+import { OperatorMap } from './14-operator-map';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -33,4 +34,6 @@ import { OperatorFilter } from './13-operator-filter';
 
 // runMyFun(CreationFunctionCombineLatest);
 
-runMyFun(OperatorFilter);
+// runMyFun(OperatorFilter);
+
+runMyFun(OperatorMap);

@@ -14,6 +14,7 @@ import { CreationFunctionCombineLatest } from './12-creation_fun_combineLatest';
 import { OperatorFilter } from './13-operator-filter';
 import { OperatorMap } from './14-operator-map';
 import { OperatorTap } from './15-operator-tap';
+import { OperatorDebounceTime } from './16-operator_debounceTime';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -39,4 +40,6 @@ import { OperatorTap } from './15-operator-tap';
 
 // runMyFun(OperatorMap);
 
-runMyFun(OperatorTap);
+// runMyFun(OperatorTap);
+
+runMyFun(OperatorDebounceTime);

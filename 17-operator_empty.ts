@@ -20,7 +20,7 @@ export class OperatorEmpty {
         next: (value) => {
           console.log('value:', value);
         },
-        // without {error:} app will crash down!!!
+        // without {error:} app will crash down!!! But if pipe(catchError with EMPTY no need to add {error:})
         // error: (err) => {
         //   console.log('err:', err);
         // },

@@ -15,6 +15,7 @@ import { OperatorFilter } from './13-operator-filter';
 import { OperatorMap } from './14-operator-map';
 import { OperatorTap } from './15-operator-tap';
 import { OperatorDebounceTime } from './16-operator_debounceTime';
+import { OperatorEmpty } from './17-operator_empty';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -42,4 +43,6 @@ import { OperatorDebounceTime } from './16-operator_debounceTime';
 
 // runMyFun(OperatorTap);
 
-runMyFun(OperatorDebounceTime);
+// runMyFun(OperatorDebounceTime);
+
+runMyFun(OperatorEmpty);

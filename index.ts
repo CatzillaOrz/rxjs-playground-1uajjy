@@ -11,6 +11,7 @@ import { CreationFuntionFromEvent } from './09-creation_fun_fromEvent';
 import { CreateionFuntionTimer } from './10-creation_fun_timer';
 import { CreationFunctionForkJoin } from './11-creation_fun_forkJoin';
 import { CreationFunctionCombineLatest } from './12-creation_fun_combineLatest';
+import { OperatorFilter } from './13-operator-filter';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -30,4 +31,6 @@ import { CreationFunctionCombineLatest } from './12-creation_fun_combineLatest';
 
 // runMyFun(CreationFunctionForkJoin);
 
-runMyFun(CreationFunctionCombineLatest);
+// runMyFun(CreationFunctionCombineLatest);
+
+runMyFun(OperatorFilter);

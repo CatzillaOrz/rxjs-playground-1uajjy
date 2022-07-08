@@ -8,7 +8,10 @@ export class FlatteningOperatorConcatMap {
 
     fromEvent(fetchButton, 'click')
       .pipe(
-        tap((value) => console.log(endpointInput.value)),
+        tap((value) => {
+          console.log(endpointInput.value);
+          console.log(value);
+        }),
         map(() => endpointInput['value']),
         concatMap((value) =>
           ajax(`http://random-data-api.com/api/${value}/random_${value}`)

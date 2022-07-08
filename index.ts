@@ -13,6 +13,7 @@ import { CreationFunctionForkJoin } from './11-creation_fun_forkJoin';
 import { CreationFunctionCombineLatest } from './12-creation_fun_combineLatest';
 import { OperatorFilter } from './13-operator-filter';
 import { OperatorMap } from './14-operator-map';
+import { OperatorTap } from './15-operator-tap';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -36,4 +37,6 @@ import { OperatorMap } from './14-operator-map';
 
 // runMyFun(OperatorFilter);
 
-runMyFun(OperatorMap);
+// runMyFun(OperatorMap);
+
+runMyFun(OperatorTap);

@@ -16,9 +16,11 @@ export class FlatteningOperatorConcatMap {
         }),
         map(() => endpointInput['value']),
         concatMap((value) =>
-          ajax(`https://random-data-api.com/api/${value}/random_${value}`)
-        ),
-        catchError(() => EMPTY) // If use catchError it will Teardown when error & will unsubscribe the Observable!!!
+          ajax(`https://random-data-api.com/api/${value}/random_${value}`).pipe(
+            catchError(() => EMPTY)
+          )
+        )
+        // catchError(() => EMPTY) // If use catchError it will Teardown when error & will unsubscribe the Observable!!!
       )
       .subscribe({
         next: (value) => console.log(value),

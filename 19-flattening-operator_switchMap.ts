@@ -7,7 +7,7 @@ import { unsubscibe } from './0-unSub';
  ** This could cause Memery Release !!! should be fixed!!!
  */
 
-export class FlatteningOperatorConcurrencyConcatMap {
+export class FlatteningOperatorSwithMap {
   create() {
     const endpointInput = document.getElementById('endpoint');
     const fetchButton = document.getElementById('concat_pipe_fetch');

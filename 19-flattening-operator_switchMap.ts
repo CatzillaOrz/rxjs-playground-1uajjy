@@ -8,6 +8,13 @@ import { unsubscibe } from './0-unSub';
  ** Use { switchMap } when fetch Data
  ** Use { mergeMap } when fetch Multiple Data
  **
+ ** Cancels / Unsubscribes [√]
+ **
+ ** Memory leaks not dangerous [√]
+ **
+ ** Quick reaction to new source values [√]
+ **
+ ** Order mostly safe [√]
  */
 
 export class FlatteningOperatorSwithMap {

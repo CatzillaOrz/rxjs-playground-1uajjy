@@ -5,6 +5,9 @@ import { unsubscibe } from './0-unSub';
 /*
  ** concatMap (() => neverEndingObservable$ )
  ** This could cause Memery Release !!! should be fixed!!!
+ ** Use { switchMap } when fetch Data
+ ** Use { mergeMap } when fetch Multiple Data
+ **
  */
 
 export class FlatteningOperatorSwithMap {

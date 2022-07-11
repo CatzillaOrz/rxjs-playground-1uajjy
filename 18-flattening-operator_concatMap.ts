@@ -3,6 +3,14 @@ import { ajax } from 'rxjs/ajax';
 import { catchError } from 'rxjs/operators';
 import { unsubscibe } from './0-unSub';
 
+/*
+ ** { concatMap }
+ **  Queues / Buffers
+ **  Memory leaks easy to notice
+ **   Value handled one by one
+ **
+ */
+
 export class FlatteningOperatorConcatMap {
   create() {
     const endpointInput = document.getElementById('endpoint');

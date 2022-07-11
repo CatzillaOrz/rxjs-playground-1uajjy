@@ -40,6 +40,36 @@
     >
       <div class="card m-2">
         <div class="card-body text-sky-400">
+          <div
+            class="grid grid-flow-row-dense grid-cols-3 gap-x-2 items-stretch"
+          >
+            <input
+              id="value-input"
+              class="col-span-2 form-control"
+              type="text"
+            />
+            <button
+              class="
+                btn btn-primary
+                bg-sky-500
+                border-sky-500
+                place-self-center
+              "
+              id="emit"
+            >
+              emit
+            </button>
+          </div>
+          <button
+            class="btn btn-primary bg-sky-500 mt-2 border-sky-500"
+            id="subscribe"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+      <div class="card m-2">
+        <div class="card-body text-sky-400">
           <label for="customRange1" class="form-label">ConcatMap Http </label>
           <input id="endpoint" class="form-control" type="text" />
           <button

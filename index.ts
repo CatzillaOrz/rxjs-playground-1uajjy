@@ -18,6 +18,7 @@ import { OperatorDebounceTime } from './16-operator_debounceTime';
 import { OperatorEmpty } from './17-operator_empty';
 import { FlatteningOperatorConcatMap } from './18-flattening-operator_concatMap';
 import { FlatteningOperatorSwithMap } from './19-flattening-operator_switchMap';
+import { SubjectMultiCastingInAction } from './21-Subject_in_action';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -51,4 +52,7 @@ import { FlatteningOperatorSwithMap } from './19-flattening-operator_switchMap';
 
 // runMyFun(FlatteningOperatorConcatMap);
 
-runMyFun(FlatteningOperatorSwithMap);
+// runMyFun(FlatteningOperatorSwithMap);
+
+
+runMyFun(SubjectMultiCastingInAction);

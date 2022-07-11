@@ -1,5 +1,6 @@
-import { concatMap, fromEvent, map, Observable, of, tap } from 'rxjs';
+import { concatMap, EMPTY, fromEvent, map, Observable, of, tap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
+import { catchError } from 'rxjs/operators';
 import { unsubscibe } from './0-unSub';
 
 export class FlatteningOperatorConcatMap {
@@ -16,7 +17,8 @@ export class FlatteningOperatorConcatMap {
         map(() => endpointInput['value']),
         concatMap((value) =>
           ajax(`https://random-data-api.com/api/${value}/random_${value}`)
-        )
+        ),
+        catchError(() => EMPTY) // If use catchError it will Teardown when error & will unsubscribe the Observable!!!
       )
       .subscribe({
         next: (value) => console.log(value),
@@ -24,13 +26,10 @@ export class FlatteningOperatorConcatMap {
           console.log('error:', error);
         },
         complete: () => {
-          console.log('done:');
+          console.log('subscription$ Teardown when error | completed :');
+          unsubscibe([subscription$]);
         },
       });
-
-    // setTimeout(() => {
-    //   unsubscibe([subscription$]);
-    // }, 3000);
   }
   createBase() {
     const source$ = new Observable((subscriber) => {

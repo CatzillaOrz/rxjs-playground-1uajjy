@@ -1,6 +1,11 @@
-import { catchError, concatMap, fromEvent, map, of, tap } from "rxjs";
-import { ajax } from "rxjs/ajax";
-import { unsubscibe } from "./0-unSub";
+import { catchError, concatMap, fromEvent, map, of, tap } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
+import { unsubscibe } from './0-unSub';
+
+/*
+ ** concatMap (() => neverEndingObservable$ )
+ ** This could cause Memery Release !!! should be fixed!!!
+ */
 
 export class FlatteningOperatorConcurrencyConcatMap {
   create() {

@@ -17,6 +17,7 @@ import { OperatorTap } from './15-operator-tap';
 import { OperatorDebounceTime } from './16-operator_debounceTime';
 import { OperatorEmpty } from './17-operator_empty';
 import { FlatteningOperatorConcatMap } from './18-flattening-operator_concatMap';
+import { FlatteningOperatorConcurrencyConcatMap } from './19-flattening-operator_concurrency';
 
 // runMyFun(RxjsUnsubscribe);
 
@@ -48,4 +49,6 @@ import { FlatteningOperatorConcatMap } from './18-flattening-operator_concatMap'
 
 // runMyFun(OperatorEmpty);
 
-runMyFun(FlatteningOperatorConcatMap);
+// runMyFun(FlatteningOperatorConcatMap);
+
+runMyFun(FlatteningOperatorConcurrencyConcatMap);

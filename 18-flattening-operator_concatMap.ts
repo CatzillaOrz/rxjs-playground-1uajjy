@@ -1,23 +1,36 @@
 import { concatMap, fromEvent, map, Observable, of, tap } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
+import { unsubscibe } from './0-unSub';
 
 export class FlatteningOperatorConcatMap {
   create() {
     const endpointInput = document.getElementById('endpoint');
     const fetchButton = document.getElementById('concat_pipe_fetch');
 
-    fromEvent(fetchButton, 'click')
+    let subscription$ = fromEvent(fetchButton, 'click')
       .pipe(
         tap((value) => {
-          console.log(endpointInput.value);
+          console.log('[endpointInput]:', endpointInput['value']);
           console.log(value);
         }),
         map(() => endpointInput['value']),
         concatMap((value) =>
-          ajax(`http://random-data-api.com/api/${value}/random_${value}`)
+          ajax(`https://random-data-api.com/api/${value}/random_${value}`)
         )
       )
-      .subscribe((value) => console.log(value));
+      .subscribe({
+        next: (value) => console.log(value),
+        error: (error) => {
+          console.log('error:', error);
+        },
+        complete: () => {
+          console.log('done:');
+        },
+      });
+
+    // setTimeout(() => {
+    //   unsubscibe([subscription$]);
+    // }, 3000);
   }
   createBase() {
     const source$ = new Observable((subscriber) => {

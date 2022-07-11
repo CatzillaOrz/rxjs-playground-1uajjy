@@ -6,9 +6,9 @@ import { unsubscibe } from './0-unSub';
 /*
  ** { concatMap }
  **  Queues / Buffers
- **  Memory leaks easy to notice
- **   Value handled one by one
- **
+ **  Memory leaks easy to notice [√]
+ **   Value handled one by one [√]
+ **  Possible delayed reactions [ç]
  */
 
 export class FlatteningOperatorConcatMap {
